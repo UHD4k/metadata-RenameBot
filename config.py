@@ -78,13 +78,13 @@ Exᴀᴍᴩʟᴇ:- <code> /set_caption 📕 Fɪʟᴇ Nᴀᴍᴇ : {filename}
 <b>•></b> <b>Sᴇɴᴅ Aɴy Fɪʟᴇ Aɴᴅ Tyᴩᴇ Nᴇᴡ Fɪʟᴇ Nɴᴀᴍᴇ \nAɴᴅ Aᴇʟᴇᴄᴛ Tʜᴇ Fᴏʀᴍᴀᴛ [ document, video, audio ].</b>           
 
 
-<b>⦿ Developer:</b> <a href=https://t.me/Cute_Boy_Saravana>Ƭɴ69 ×͜× Sᴀʀᴀᴠᴀɴᴀ࿐</a></b>
+<b>⦿ Dᴇᴠᴇʟᴏᴘᴇʀ :</b> <b><a href=https://t.me/Cute_Boy_Saravana>Ƭɴ69 ×͜× Sᴀʀᴀᴠᴀɴᴀ࿐</a></b>
 """
 
     SEND_METADATA = """
 ❪ SET CUSTOM METADATA ❫
 
-☞ Fᴏʀ Exᴀᴍᴘʟᴇ:-
+<b>☞ Fᴏʀ Exᴀᴍᴘʟᴇ :-</b>
 
 ◦ <code><b> -map 0 -c:s copy -c:a copy -c:v copy -metadata title="Powered By :- @TN69Links" -metadata author="@TN69Links" -metadata:s:s title="Subtitled By :- @TN69Links" -metadata:s:a title="Telegram - @TN69Links" -metadata:s:v title="Telegram - @TN69Links</b>" </code>
 

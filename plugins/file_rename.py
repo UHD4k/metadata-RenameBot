@@ -24,7 +24,7 @@ app = Client("test", api_id=Config.STRING_API_ID,
 @Client.on_callback_query(filters.regex('rename'))
 async def rename(bot, update):
     await update.message.delete()
-    await update.message.reply_text("__𝙿𝚕𝚎𝚊𝚜𝚎 𝙴𝚗𝚝𝚎𝚛 𝙽𝚎𝚠 𝙵𝚒𝚕𝚎𝙽𝚊𝚖𝚎...__",
+    await update.message.reply_text("__Pʟᴇᴀsᴇ Eɴᴛᴇʀ Nᴇᴡ FɪʟᴇNᴀᴍᴇ...__",
                                     reply_to_message_id=update.message.reply_to_message.id,
                                     reply_markup=ForceReply(True))
 
@@ -62,7 +62,7 @@ async def refunc(client, message):
 
         # Use a single call to reply with both text and inline keyboard
         await message.reply(
-            text=f"**Sᴇʟᴇᴄᴛ Tʜᴇ Oᴜᴛᴩᴜᴛ Fɪʟᴇ Tyᴩᴇ**\n**• Fɪʟᴇ Nᴀᴍᴇ :-**  `{new_name}`",
+            text=f"**Sᴇʟᴇᴄᴛ Tʜᴇ OᴜᴛPᴜᴛ Fɪʟᴇ Tyᴩᴇ**\n**• Fɪʟᴇ Nᴀᴍᴇ :-**  `{new_name}`",
             reply_to_message_id=file.id,
             reply_markup=InlineKeyboardMarkup(button)
         )
@@ -88,7 +88,7 @@ async def doc(bot, update):
         new_filename = add_prefix_suffix(new_filename_, prefix, suffix)
 
     except Exception as e:
-        return await update.message.edit(f"⚠️ Something went wrong can't able to set Prefix or Suffix ☹️ \n\n❄Contact My Creator -> @c0nt4ct_bot\nError: {e}")
+        return await update.message.edit(f"**⚠️ Sᴏᴍᴇᴛʜɪɴɢ Wᴇɴᴛ Wʀᴏɴɢ Cᴀɴ'ᴛ Aʙʟᴇ Tᴏ Sᴇᴛ Pʀᴇғɪx Oʀ Sᴜғғɪx ☹️ \n\n📞 Cᴏɴᴛᴀᴄᴛ Mʏ Cʀᴇᴀᴛᴏʀ -> @Cute_Boy_Saravana\nEʀʀᴏʀ: {e}**")
 
     file_path = f"downloads/{new_filename}"
     file = update.message.reply_to_message
@@ -106,7 +106,7 @@ async def doc(bot, update):
         metadata = await db.get_metadata_code(update.message.chat.id)
         if metadata:
 
-            await ms.edit("I Fᴏᴜɴᴅ Yᴏᴜʀ Mᴇᴛᴀᴅᴀᴛᴀ\n\n__**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n**Aᴅᴅɪɴɢ Mᴇᴛᴀᴅᴀᴛᴀ Tᴏ Fɪʟᴇ....**")
+            await ms.edit("I Fᴏᴜɴᴅ Yᴏᴜʀ MᴇᴛᴀDᴀᴛᴀ\n\n__**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n**Aᴅᴅɪɴɢ Mᴇᴛᴀᴅᴀᴛᴀ Tᴏ Fɪʟᴇ....**")
             cmd = f"""ffmpeg -i "{path}" {metadata} "{metadata_path}" """
 
             process = await asyncio.create_subprocess_shell(
@@ -118,12 +118,12 @@ async def doc(bot, update):
 
             try:
                 if er:
-                    return await ms.edit(str(er) + "\n\n**Error**")
+                    return await ms.edit(str(er) + "\n\n**Eʀʀᴏʀ**")
             except BaseException:
                 pass
-        await ms.edit("**Metadata added to the file successfully ✅**\n\n⚠️ __**Please wait...**__\n\n**Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ....**")
+        await ms.edit("**Mᴇᴛᴀᴅᴀᴛᴀ Aᴅᴅᴇᴅ Tᴏ Tʜᴇ Fɪʟᴇ Sᴜᴄᴄᴇssғᴜʟʟʏ ✅**\n\n⚠️ __**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n\n**Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ....**")
     else:
-        await ms.edit("⚠️  __**Please wait...**__\n\n\n**Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ....**")
+        await ms.edit("⚠️  __**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n\n\n**Tʀyɪɴɢ Tᴏ Uᴩʟᴏᴀᴅɪɴɢ....**")
 
     duration = 0
     try:
@@ -173,7 +173,7 @@ async def doc(bot, update):
                     thumb=ph_path,
                     caption=caption,
                     progress=progress_for_pyrogram,
-                    progress_args=("⚠️ __**Please wait...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+                    progress_args=("⚠️ __**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
 
                 from_chat = filw.chat.id
                 mg_id = filw.id
@@ -192,7 +192,7 @@ async def doc(bot, update):
                     height=height,
                     duration=duration,
                     progress=progress_for_pyrogram,
-                    progress_args=("⚠️ __**Please wait...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+                    progress_args=("⚠️ __**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
 
                 from_chat = filw.chat.id
                 mg_id = filw.id
@@ -208,7 +208,7 @@ async def doc(bot, update):
                     thumb=ph_path,
                     duration=duration,
                     progress=progress_for_pyrogram,
-                    progress_args=("⚠️ __**Please wait...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+                    progress_args=("⚠️ __**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
 
                 from_chat = filw.chat.id
                 mg_id = filw.id
@@ -237,7 +237,7 @@ async def doc(bot, update):
                     thumb=ph_path,
                     caption=caption,
                     progress=progress_for_pyrogram,
-                    progress_args=("⚠️ __**Please wait...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+                    progress_args=("⚠️ __**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
             elif type == "video":
                 await bot.send_video(
                     update.message.chat.id,
@@ -248,7 +248,7 @@ async def doc(bot, update):
                     height=height,
                     duration=duration,
                     progress=progress_for_pyrogram,
-                    progress_args=("⚠️ __**Please wait...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+                    progress_args=("⚠️ __**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
             elif type == "audio":
                 await bot.send_audio(
                     update.message.chat.id,
@@ -257,7 +257,7 @@ async def doc(bot, update):
                     thumb=ph_path,
                     duration=duration,
                     progress=progress_for_pyrogram,
-                    progress_args=("⚠️ __**Please wait...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
+                    progress_args=("⚠️ __**Pʟᴇᴀsᴇ Wᴀɪᴛ...**__\n\n🌨️ **Uᴩʟᴏᴅ Sᴛᴀʀᴛᴇᴅ....**", ms, time.time()))
         except Exception as e:
             os.remove(file_path)
             if ph_path:

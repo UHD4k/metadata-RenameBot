@@ -20,9 +20,9 @@ async def handle_metadata(bot: Client, message: Message):
     await ms.delete()
     if bool_metadata:
 
-        return await message.reply_text(f"Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Mᴇᴛᴀᴅᴀᴛᴀ :-\n\n➜ `{user_metadata}` ", reply_markup=InlineKeyboardMarkup(ON))
+        return await message.reply_text(f"**Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Mᴇᴛᴀᴅᴀᴛᴀ :-\n\n➜ `{user_metadata}` **", reply_markup=InlineKeyboardMarkup(ON))
 
-    return await message.reply_text(f"Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Mᴇᴛᴀᴅᴀᴛᴀ :-\n\n➜ `{user_metadata}` ", reply_markup=InlineKeyboardMarkup(OFF))
+    return await message.reply_text(f"**Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Mᴇᴛᴀᴅᴀᴛᴀ :-\n\n➜ `{user_metadata}` **", reply_markup=InlineKeyboardMarkup(OFF))
 
 
 @Client.on_callback_query(filters.regex('.*?(custom_metadata|metadata).*?'))
@@ -36,11 +36,11 @@ async def query_metadata(bot: Client, query: CallbackQuery):
 
         if bool(eval(_bool)):
             await db.set_metadata(query.from_user.id, bool_meta=False)
-            await query.message.edit(f"Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Mᴇᴛᴀᴅᴀᴛᴀ :-\n\n➜ `{user_metadata}` ", reply_markup=InlineKeyboardMarkup(OFF))
+            await query.message.edit(f"**Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Mᴇᴛᴀᴅᴀᴛᴀ :-\n\n➜ `{user_metadata}` **", reply_markup=InlineKeyboardMarkup(OFF))
 
         else:
             await db.set_metadata(query.from_user.id, bool_meta=True)
-            await query.message.edit(f"Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Mᴇᴛᴀᴅᴀᴛᴀ :-\n\n➜ `{user_metadata}` ", reply_markup=InlineKeyboardMarkup(ON))
+            await query.message.edit(f"**Yᴏᴜʀ Cᴜʀʀᴇɴᴛ Mᴇᴛᴀᴅᴀᴛᴀ :-\n\n➜ `{user_metadata}` **", reply_markup=InlineKeyboardMarkup(ON))
 
     elif data == 'cutom_metadata':
         await query.message.delete()
@@ -48,7 +48,7 @@ async def query_metadata(bot: Client, query: CallbackQuery):
             try:
                 metadata = await bot.ask(text=Txt.SEND_METADATA, chat_id=query.from_user.id, filters=filters.text, timeout=30, disable_web_page_preview=True)
             except ListenerTimeout:
-                await query.message.reply_text("⚠️ Eʀʀᴏʀ!!\n\n**Rᴇǫᴜᴇsᴛ Tɪᴍᴇᴅ Oᴜᴛ.**\nRᴇsᴛᴀʀᴛ Bʏ Usɪɴɢ /metadata", reply_to_message_id=query.message.id)
+                await query.message.reply_text("**⚠️ Eʀʀᴏʀ!!\n\n**Rᴇǫᴜᴇsᴛ Tɪᴍᴇᴅ Oᴜᴛ.**\nRᴇsᴛᴀʀᴛ Bʏ Usɪɴɢ /metadata**", reply_to_message_id=query.message.id)
                 return
             print(metadata.text)
             ms = await query.message.reply_text("**Pʟᴇᴀsᴇ Wᴀɪᴛ...**", reply_to_message_id=metadata.id)

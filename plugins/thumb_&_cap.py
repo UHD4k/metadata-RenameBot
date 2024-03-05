@@ -24,7 +24,7 @@ async def delete_caption(client, message):
 async def see_caption(client, message):
     caption = await db.get_caption(message.from_user.id)
     if caption:
-        await message.reply_text(f"**Yᴏᴜ'ʀᴇ Cᴀᴩᴛɪᴏɴ:-**\n\n`{caption}`")
+        await message.reply_text(f"**Yᴏᴜ'ʀᴇ Cᴀᴩᴛɪᴏɴ :-\n\n`{caption}`**")
     else:
         await message.reply_text("__**😔 Yᴏᴜ Dᴏɴ'ᴛ Hᴀᴠᴇ Aɴy Cᴀᴩᴛɪᴏɴ**__")
 
@@ -46,6 +46,6 @@ async def removethumb(client, message):
 
 @Client.on_message(filters.private & filters.photo)
 async def addthumbs(client, message):
-    SnowDev = await message.reply_text("Please Wait ...", reply_to_message_id=message.id)
+    SnowDev = await message.reply_text("**Pʟᴇᴀsᴇ Wᴀɪᴛ...**", reply_to_message_id=message.id)
     await db.set_thumbnail(message.from_user.id, file_id=message.photo.file_id)
     await SnowDev.edit("✅️ __**Tʜᴜᴍʙɴᴀɪʟ Sᴀᴠᴇᴅ**__")

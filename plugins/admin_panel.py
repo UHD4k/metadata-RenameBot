@@ -47,9 +47,9 @@ async def broadcast_handler(bot: Client, m: Message):
            await db.delete_user(user['_id'])
         done += 1
         if not done % 20:
-           await sts_msg.edit(f"**Bʀᴏᴀᴅᴄᴀꜱᴛ Iɴ Pʀᴏɢʀᴇꜱꜱ : \nTᴏᴛᴀʟ Uꜱᴇʀꜱ {total_users} \nCᴏᴍᴩʟᴇᴛᴇᴅ : {done} / {total_users}\nSᴜᴄᴄᴇꜱꜱ : {success}\nFᴀɪʟᴇᴅ : {failed}"**)
+           await sts_msg.edit(f"<b>Bʀᴏᴀᴅᴄᴀꜱᴛ Iɴ Pʀᴏɢʀᴇꜱꜱ : \nTᴏᴛᴀʟ Uꜱᴇʀꜱ {total_users} \nCᴏᴍᴩʟᴇᴛᴇᴅ : {done} / {total_users}\nSᴜᴄᴄᴇꜱꜱ : {success}\nFᴀɪʟᴇᴅ : {failed}</b>")
     completed_in = datetime.timedelta(seconds=int(time.time() - start_time))
-    await sts_msg.edit(f"**Bʀᴏᴀᴅᴄᴀꜱᴛ Cᴏᴍᴩʟᴇᴛᴇᴅ : \nCᴏᴍᴩʟᴇᴛᴇᴅ Iɴ `{completed_in}`.\n\nTᴏᴛᴀʟ Uꜱᴇʀꜱ {total_users}\nCᴏᴍᴩʟᴇᴛᴇᴅ : {done} / {total_users}\nSᴜᴄᴄᴇꜱꜱ : {success}\nFᴀɪʟᴇᴅ : {failed}**")
+    await sts_msg.edit(f"<b>Bʀᴏᴀᴅᴄᴀꜱᴛ Cᴏᴍᴩʟᴇᴛᴇᴅ : \nCᴏᴍᴩʟᴇᴛᴇᴅ Iɴ `{completed_in}`.\n\nTᴏᴛᴀʟ Uꜱᴇʀꜱ {total_users}\nCᴏᴍᴩʟᴇᴛᴇᴅ : {done} / {total_users}\nSᴜᴄᴄᴇꜱꜱ : {success}\nFᴀɪʟᴇᴅ : {failed}</b>")
            
 async def send_msg(user_id, message):
     try:

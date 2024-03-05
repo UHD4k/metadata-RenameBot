@@ -54,7 +54,7 @@ Tʜɪs Bᴏᴛ Aʟꜱᴏ Sᴜᴘᴘᴏʀᴛs Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ
 ├📕 Lɪʙʀᴀʀy : <a href=https://github.com/pyrogram>Pyʀᴏɢʀᴀᴍ</a>
 ├✏️ Lᴀɴɢᴜᴀɢᴇ: <a href=https://www.python.org>Pyᴛʜᴏɴ 3</a>
 ├💾 Dᴀᴛᴀ Bᴀꜱᴇ: <a href=https://cloud.mongodb.com>Mᴏɴɢᴏ DB</a>
-├🌀 Mʏ Sᴇʀᴠᴇʀ : <a href=https://dashboard.heroku.com>Heroku</a>
+├🌀 Mʏ Sᴇʀᴠᴇʀ : <a href=https://dashboard.render.com>Rᴇɴᴅᴇʀ</a>
 ╰───────────────⍟ </b>"""
 
     HELP_TXT = """

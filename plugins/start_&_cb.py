@@ -18,9 +18,9 @@ async def start(client, message):
     await db.add_user(client, message)
     button = InlineKeyboardMarkup([[
         InlineKeyboardButton(
-            '🦋 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url='https://t.me/TN69_Links'),
+            '🦋 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url='https://t.me/LCUxCloud'),
         InlineKeyboardButton(
-            '🌸 Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ', url='https://t.me/RoyalxMovies')
+            '🌸 Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ', url='https://t.me/RoyalxMoviesOfficial')
     ], [
         InlineKeyboardButton('✪⁠ Aʙᴏᴜᴛ', callback_data='about'),
         InlineKeyboardButton('𖣘 Hᴇʟᴩ', callback_data='help')
@@ -65,9 +65,9 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton(
-                    '🦋 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url='https://t.me/TN69_Links'),
+                    '🦋 Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url='https://t.me/LCUxCloud'),
                 InlineKeyboardButton(
-                    '🌸 Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ', url='https://t.me/RoyalxMovies')
+                    '🌸 Sᴜᴘᴘᴏʀᴛ Cʜᴀɴɴᴇʟ', url='https://t.me/RoyalxMoviesOfficial')
             ], [
                 InlineKeyboardButton('✪ Aʙᴏᴜᴛ', callback_data='about'),
                 InlineKeyboardButton('𖣘 Hᴇʟᴩ', callback_data='help')
